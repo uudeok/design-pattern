@@ -1,4 +1,4 @@
-import { Door } from './Door';
+import type { Door } from './Door';
 import type { DoorState } from './DoorState';
 import { OpenState } from './OpenState';
 
