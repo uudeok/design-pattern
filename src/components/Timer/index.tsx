@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Timer } from '../state-pattern/Timer/Timer';
+import { Timer } from '../../state-pattern/Timer/Timer';
 import styles from './Timer.module.css';
 
 export function TimerComponent() {
