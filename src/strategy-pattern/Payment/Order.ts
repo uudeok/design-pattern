@@ -13,5 +13,6 @@ export class Order {
 
     pay(amount: number): void {
         this.paymentStrategy.pay(amount);
+        this.paymentStrategy.rewardPoint(amount);
     }
 }
