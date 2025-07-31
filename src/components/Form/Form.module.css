@@ -5,13 +5,11 @@
     border-radius: 12px;
     background-color: #f9f9fb;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    font-family: 'Arial', sans-serif;
 }
 
 .heading {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
     color: #333;
 }
 
@@ -21,9 +19,11 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 8px;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
     outline: none;
     transition: border-color 0.2s ease;
+    box-sizing: border-box;
 }
 
 .input:focus {
@@ -64,4 +64,8 @@
 
 .button:not(:disabled):hover {
     background-color: #4338ca;
+}
+
+.errorMsg {
+    color: red;
 }
