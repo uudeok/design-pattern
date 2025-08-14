@@ -1,6 +1,7 @@
 import './App.css';
 import { LoginForm } from './components/Form/LoginForm';
 import UserForm from './components/Form/UserForm';
+import { MemoApp } from './components/Memo';
 
 import { PaymentComponent } from './components/Payment';
 import { SortComponent } from './components/Sort';
@@ -14,6 +15,7 @@ function App() {
             <PaymentComponent />
             <SortComponent />
             <UserForm />
+            <MemoApp />
         </>
     );
 }

@@ -1,0 +1,106 @@
+.container {
+    width: 400px;
+    margin: 20px auto;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.inputArea {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.addBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    background-color: #45a049;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.undoBtn,
+.redoBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+}
+
+.undoBtn:hover,
+.redoBtn:hover {
+    background-color: #1976d2;
+}
+
+.memoList {
+    list-style: none;
+    padding: 0;
+}
+
+.memoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.actions {
+    display: flex;
+    gap: 4px;
+}
+
+.editBtn,
+.deleteBtn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.editBtn {
+    background-color: #ff9800;
+    color: white;
+}
+
+.editBtn:hover {
+    background-color: #fb8c00;
+}
+
+.deleteBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+.deleteBtn:hover {
+    background-color: #d32f2f;
+}
