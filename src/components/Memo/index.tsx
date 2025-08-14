@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 
 import styles from './Memo.module.css';
-import { MemoManager } from '../../command-pattern/Memo/manager';
-import { AddMemo } from '../../command-pattern/Memo/commands/addMemo';
-import { EditMemo } from '../../command-pattern/Memo/commands/editMeme';
-import { DeleteMemo } from '../../command-pattern/Memo/commands/deleteMemo';
-import { Undo } from '../../command-pattern/Memo/commands/undo';
-import { Redo } from '../../command-pattern/Memo/commands/redo';
+import { AddMemo, MemoManager, EditMemo, DeleteMemo, Undo, Redo } from '../../command-pattern/Memo';
 
 const manager = new MemoManager();
 

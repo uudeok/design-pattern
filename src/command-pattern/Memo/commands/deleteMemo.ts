@@ -1,4 +1,5 @@
-import { MemoManager, type Command } from '../manager';
+import { MemoManager } from '../manager';
+import type { Command } from './command';
 
 export class DeleteMemo implements Command {
     constructor(private index: number) {}

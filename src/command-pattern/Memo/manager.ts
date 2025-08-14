@@ -1,6 +1,4 @@
-export interface Command {
-    apply(manager: MemoManager): void;
-}
+import type { Command } from './commands/command';
 
 export class MemoManager {
     memos: string[]; // 현재 메모
