@@ -1,10 +1,10 @@
-import styles from './Form.module.css';
+import styles from './LoginForm.module.css';
 import { EmailValidator } from '../../validator/EmailValidator';
 import { PasswordValidator } from '../../validator/PasswordValidator';
 import { NicknameValidator } from '../../validator/NicknameValidator';
 import { useValidatorInput } from '../../hooks/useValidator';
 
-export const EmailForm = () => {
+export const LoginForm = () => {
     const email = useValidatorInput(EmailValidator);
     const password = useValidatorInput(PasswordValidator);
     const nickname = useValidatorInput(NicknameValidator);
@@ -16,38 +16,29 @@ export const EmailForm = () => {
 
         if (isValid) {
             alert('모든 유효성 검사 통과!');
+            email.setValue('');
+            password.setValue('');
+            nickname.setValue('');
         }
     };
 
     return (
         <form className={styles.container} onSubmit={handleSubmit}>
             <label className={styles.heading}>📮 이메일 입력</label>
-            <input
-                type="text"
-                value={email.value}
-                onChange={email.onChange}
-                placeholder="you@example.com"
-                className={styles.input}
-            />
+            <input type="text" {...email.field} placeholder="you@example.com" className={styles.input} />
             {email.error && <p className={styles.errorMsg}>{email.error}</p>}
 
             <label className={styles.heading}>🔐 비밀번호 입력</label>
             <input
                 type="password"
-                value={password.value}
-                onChange={password.onChange}
+                {...password.field}
                 placeholder="대문자, 소문자, 특수문자를 포함한 9자 이상"
                 className={styles.input}
             />
             {password.error && <p className={styles.errorMsg}>{password.error}</p>}
 
             <label className={styles.heading}>🔎 닉네임</label>
-            <input
-                value={nickname.value}
-                onChange={nickname.onChange}
-                placeholder="2글자 이상 한글만 가능"
-                className={styles.input}
-            />
+            <input {...nickname.field} placeholder="2글자 이상 한글만 가능" className={styles.input} />
             {nickname.error && <p className={styles.errorMsg}>{nickname.error}</p>}
 
             <button className={styles.button}>확인</button>

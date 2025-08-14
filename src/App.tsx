@@ -1,6 +1,7 @@
 import './App.css';
+import { LoginForm } from './components/Form/LoginForm';
+import UserForm from './components/Form/UserForm';
 
-import { EmailForm } from './components/Form';
 import { PaymentComponent } from './components/Payment';
 import { SortComponent } from './components/Sort';
 import { TimerComponent } from './components/Timer';
@@ -9,9 +10,10 @@ function App() {
     return (
         <>
             <TimerComponent />
-            <EmailForm />
+            <LoginForm />
             <PaymentComponent />
             <SortComponent />
+            <UserForm />
         </>
     );
 }

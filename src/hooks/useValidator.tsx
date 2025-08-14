@@ -14,11 +14,19 @@ export const useValidatorInput = <T extends Validator>(ValidatorClass: new (valu
         return !errorMsg;
     };
 
+    /** Input active 시, 에러 메시지 숨김 */
+    // useEffect(() => {
+    //     if (!error) return;
+    //     setError(null);
+    // }, [value]);
+
     return {
-        value,
         setValue,
         error,
         validate,
-        onChange: (e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value),
+        field: {
+            value,
+            onChange: (e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value),
+        },
     };
 };
